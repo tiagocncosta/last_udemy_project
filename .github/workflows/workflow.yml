@@ -39,7 +39,9 @@ jobs:
         run: echo "This is not the main branch."
 
       - name: Run tests
-        run: npm test
+        run: |
+          npm install
+          npm test
 
       - name: Debug message
         if: env.DEBUG == 'true'
@@ -65,7 +67,9 @@ jobs:
         run: echo "This is not the main branch."
 
       - name: Run tests
-        run: npm test
+        run: |
+          npm install
+          npm test
 
       - name: Debug message
         if: env.DEBUG == 'true'
